@@ -207,14 +207,14 @@ export default class Intro extends Component<Props, State> {
     try {
       clipboardItems = await navigator.clipboard.read();
     } catch (err) {
-      this.props.showSnack!(`No permission to access clipboard`);
+      this.props.showSnack!(`没有访问剪贴板的权限,请手动左上角开启`);
       return;
     }
 
     const blob = await getImageClipboardItem(clipboardItems);
 
     if (!blob) {
-      this.props.showSnack!(`No image found in the clipboard`);
+      this.props.showSnack!(`剪贴板中没有图像`);
       return;
     }
 
@@ -222,7 +222,7 @@ export default class Intro extends Component<Props, State> {
   };
 
   render(
-    {}: Props,
+    { }: Props,
     { fetchingDemoIndex, beforeInstallEvent, showBlobSVG }: State,
   ) {
     return (
@@ -285,10 +285,10 @@ export default class Intro extends Component<Props, State> {
                 </svg>
               </button>
               <div>
-                <span class={style.dropText}>Drop </span>OR{' '}
+                <span class={style.dropText}>拖放 </span>或{' '}
                 {supportsClipboardAPI ? (
                   <button class={style.pasteBtn} onClick={this.onPasteClick}>
-                    Paste
+                    粘贴
                   </button>
                 ) : (
                   'Paste'
@@ -310,7 +310,7 @@ export default class Intro extends Component<Props, State> {
           </svg>
           <div class={style.contentPadding}>
             <p class={style.demoTitle}>
-              Or <strong>try one</strong> of these:
+              或者<strong>尝试以下</strong>之一：
             </p>
             <ul class={style.demos}>
               {demos.map((demo, i) => (
@@ -355,11 +355,11 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Small</h2>
+                  <h2 class={style.infoTitle}>小型</h2>
                   <p class={style.infoCaption}>
-                    Smaller images mean faster load times. Squoosh can reduce
-                    file size and maintain high quality.
+                    较小的图片意味着更快的加载时间。Squoosh可以减少文件大小同时保持高质量。
                   </p>
+
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
@@ -380,12 +380,11 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Simple</h2>
+                  <h2 class={style.infoTitle}>简单</h2>
                   <p class={style.infoCaption}>
-                    Open your image, inspect the differences, then save
-                    instantly. Feeling adventurous? Adjust the settings for even
-                    smaller files.
+                    打开您的图片，检查差异，然后立即保存。感觉冒险？调整设置以获得更小的文件。
                   </p>
+
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
@@ -406,10 +405,9 @@ export default class Intro extends Component<Props, State> {
             <SlideOnScroll>
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
-                  <h2 class={style.infoTitle}>Secure</h2>
+                <h2 class={style.infoTitle}>安全</h2>
                   <p class={style.infoCaption}>
-                    Worried about privacy? Images never leave your device since
-                    Squoosh does all the work locally.
+                    担心隐私问题？由于Squoosh在本地处理所有操作，图像永远不会离开您的设备。
                   </p>
                 </div>
                 <div class={style.infoImgWrapper}>
@@ -438,16 +436,16 @@ export default class Intro extends Component<Props, State> {
               <footer class={style.footerItems}>
                 <a
                   class={style.footerLink}
-                  href="https://github.com/GoogleChromeLabs/squoosh/blob/dev/README.md#privacy"
+                  href="https://github.com/woodchen-ink/squoosh/blob/dev/README.md#privacy"
                 >
-                  Privacy
+                  隐私
                 </a>
                 <a
                   class={style.footerLinkWithLogo}
-                  href="https://github.com/GoogleChromeLabs/squoosh"
+                  href="https://github.com/woodchen-ink/squoosh"
                 >
                   <img src={githubLogo} alt="" width="10" height="10" />
-                  Source on Github
+                  源码在Github上
                 </a>
               </footer>
             </div>
@@ -455,7 +453,7 @@ export default class Intro extends Component<Props, State> {
         </footer>
         {beforeInstallEvent && (
           <button class={style.installBtn} onClick={this.onInstallClick}>
-            Install
+            安装
           </button>
         )}
       </div>
