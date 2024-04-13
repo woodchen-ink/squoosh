@@ -133,7 +133,7 @@ export class Options extends Component<Props, State> {
     return (
       <form class={style.optionsSection} onSubmit={preventDefault}>
         <label class={style.optionToggle}>
-          Lossless
+          无损压缩
           <Checkbox
             name="lossless"
             checked={lossless}
@@ -143,7 +143,7 @@ export class Options extends Component<Props, State> {
         <Expander>
           {lossless && (
             <label class={style.optionToggle}>
-              Slight loss
+              轻微损失
               <Checkbox
                 name="slightLoss"
                 checked={slightLoss}
@@ -163,11 +163,11 @@ export class Options extends Component<Props, State> {
                   value={quality}
                   onInput={this._inputChange('quality', 'number')}
                 >
-                  Quality:
+                  质量:
                 </Range>
               </div>
               <label class={style.optionToggle}>
-                Alternative lossy mode
+              替代有损模式
                 <Checkbox
                   checked={quality < 7 ? true : alternativeLossy}
                   disabled={quality < 7}
@@ -175,7 +175,7 @@ export class Options extends Component<Props, State> {
                 />
               </label>
               <label class={style.optionToggle}>
-                Auto edge filter
+              自动边缘滤波器
                 <Checkbox
                   checked={autoEdgePreservingFilter}
                   onChange={this._inputChange(
@@ -196,7 +196,7 @@ export class Options extends Component<Props, State> {
                         'number',
                       )}
                     >
-                      Edge preserving filter:
+                      保边滤波器:
                     </Range>
                   </div>
                 )}
@@ -208,7 +208,7 @@ export class Options extends Component<Props, State> {
                   value={decodingSpeedTier}
                   onInput={this._inputChange('decodingSpeedTier', 'number')}
                 >
-                  Optimise for decoding speed (worse compression):
+                  优化解码速度（压缩效果差）:
                 </Range>
               </div>
               <div class={style.optionOneCell}>
@@ -219,14 +219,14 @@ export class Options extends Component<Props, State> {
                   value={photonNoiseIso}
                   onInput={this._inputChange('photonNoiseIso', 'number')}
                 >
-                  Noise equivalent to ISO:
+                  噪音相当于ISO:
                 </Range>
               </div>
             </div>
           )}
         </Expander>
         <label class={style.optionToggle}>
-          Progressive rendering
+        渐进式渲染
           <Checkbox
             name="progressive"
             checked={progressive}
@@ -240,7 +240,7 @@ export class Options extends Component<Props, State> {
             value={effort}
             onInput={this._inputChange('effort', 'number')}
           >
-            Effort:
+            努力程度:
           </Range>
         </div>
       </form>
