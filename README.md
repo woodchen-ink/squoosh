@@ -1,5 +1,9 @@
 # [Squoosh]!
 
+``` bash
+docker pull woodchen/squoosh
+```
+
 汉化
 
 [Squoosh] is an image compression web app that reduces image sizes through numerous formats.
