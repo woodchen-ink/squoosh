@@ -2,6 +2,21 @@
 
 汉化
 
+## 运行方法
+
+docker compose文件
+
+``` docker
+version: '3'
+services:
+  squoosh:
+    image: woodchen/squoosh
+    container_name: squoosh
+    ports:
+      - 5555:80
+    restart: unless-stopped
+```
+
 [Squoosh] is an image compression web app that reduces image sizes through numerous formats.
 
 # Privacy
