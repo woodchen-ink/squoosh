@@ -27,10 +27,10 @@ interface Props {}
 const Index: FunctionalComponent<Props> = () => (
   <html lang="en">
     <head>
-      <title>CZL图片压缩工具-Squoosh</title>
+      <title>图片压缩工具 - Q58.ORG-Squoosh</title>
       <meta
         name="description"
-        content="CZL图片压缩工具基于Squoorsh, Squoosh 是一款终极图像优化工具，可让你在浏览器中使用不同的编解码器对图像进行压缩和比较。"
+        content="图片压缩工具 - Q58.ORG基于Squoorsh, Squoosh 是一款终极图像优化工具，可让你在浏览器中使用不同的编解码器对图像进行压缩和比较。"
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@SquooshApp" />
