@@ -1,5 +1,14 @@
 FROM nginx:alpine
 
+# 设置时区和语言环境
+ENV TZ=Asia/Shanghai \
+    LANG=zh_CN.UTF-8 \
+    LANGUAGE=zh_CN:zh \
+    LC_ALL=zh_CN.UTF-8
+
+# 安装需要的包
+RUN apk add --no-cache tzdata
+
 # 复制 nginx 配置文件
 COPY nginx.conf /etc/nginx/nginx.conf
 
