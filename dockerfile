@@ -1,20 +1,23 @@
-# 使用Node.js官方镜像
-FROM node:16-alpine
+# 构建阶段
+FROM node:22-alpine AS builder
 
-# 设置工作目录
 WORKDIR /usr/src/app
 
-# 复制项目文件到容器中
+COPY package*.json ./
+RUN npm ci --only=production
+
 COPY . .
-
-# 安装项目依赖
-RUN npm install
-
-# 构建应用
 RUN npm run build
 
-# 暴露端口5000
+# 运行阶段
+FROM node:22-alpine
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/node_modules ./node_modules
+COPY package*.json ./
+
 EXPOSE 5000
 
-# 容器启动时运行的命令
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
