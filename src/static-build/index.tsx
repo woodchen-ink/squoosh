@@ -55,7 +55,7 @@ interface Output {
 const toOutput: Output = {
   'index.html': renderPage(<IndexPage />),
   'manifest.json': JSON.stringify({
-    name: '图片压缩工具 - Q58.ORG',
+    name: '图片压缩工具 - CZL',
     short_name: 'Squoosh',
     start_url: '/?utm_medium=PWA&utm_source=launcher',
     display: 'standalone',
@@ -76,7 +76,7 @@ const toOutput: Output = {
       },
     ],
     description:
-      '图片压缩工具 - Q58.ORG, 直接在浏览器中使用不同的编解码器对图像进行压缩和比较。',
+      '图片压缩工具 - CZL, 直接在浏览器中使用不同的编解码器对图像进行压缩和比较。',
     lang: 'en',
     categories: ['photo', 'productivity', 'utilities'],
     screenshots,
