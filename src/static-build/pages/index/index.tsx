@@ -61,6 +61,7 @@ const Index: FunctionalComponent<Props> = () => (
       <link rel="shortcut icon" href={favicon} />
       <link rel="apple-touch-icon" href={ogImage} />
       <meta name="theme-color" content="#ff3385" />
+      <link rel="stylesheet"  href="https://cdn-r2.czl.net/frame/czlfonts/silce/font.css" media="all"/>
       <link rel="manifest" href="/manifest.json" />
       <link rel="canonical" href={siteOrigin} />
       <style
