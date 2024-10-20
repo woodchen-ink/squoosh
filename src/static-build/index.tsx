@@ -77,7 +77,7 @@ const toOutput: Output = {
     ],
     description:
       '图片压缩工具 - CZL, 直接在浏览器中使用不同的编解码器对图像进行压缩和比较。',
-    lang: 'en',
+    lang: 'zh-cn',
     categories: ['photo', 'productivity', 'utilities'],
     screenshots,
     share_target: {
