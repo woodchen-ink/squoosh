@@ -28,7 +28,7 @@ const Index: FunctionalComponent<Props> = () => (
   <html lang="zh-cn">
     <head>
       <title>图片压缩工具 - CZL-Squoosh</title>
-      <meta charset="UTF-8"/>
+      <meta charSet="UTF-8"/>
       <meta
         name="description"
         content="图片压缩工具 - CZL基于Squoorsh, Squoosh 是一款终极图像优化工具，可让你在浏览器中使用不同的编解码器对图像进行压缩和比较。"
