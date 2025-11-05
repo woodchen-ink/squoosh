@@ -106,7 +106,7 @@ const Index: FunctionalComponent<Props> = () => (
       />
       <script async src="https://analytics.czl.net/script.js" data-website-id="9e69307e-9d34-4f98-a021-58ac5faba95e"></script>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4684536310184190"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
     </body>
   </html>
 );
